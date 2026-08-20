@@ -1,0 +1,5 @@
+Para la instalacion primero se instala el express con :
+npm install express
+luego se istala dotenv con : //este es para manejar variables de entorno por ejemplo el puerto
+npm install dotenv
+Despues de puede configurar en scripts del package.json el script de dev para que use watch asi : node -watch app.js
