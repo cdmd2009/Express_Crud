@@ -106,7 +106,27 @@ app.put("/api/aprendices/:dni", (req, res)=>{
         
     })
 })
-
+//Endpoint para eliminar un aprendiz
+app.delete("/api/aprendices/:dni", (req, res) => {
+    const dni = parseInt(req.params.dni)
+    sistemaArchivo.readFile(rutaArchivoJson, "utf-8", (error, datos) => {
+        if (error) {
+            return res.status(500).json({ Error: "Error al leer el archivo, conxion bd" })
+        }
+        let listaAprendices = JSON.parse(datos);
+        const index = listaAprendices.findIndex(a => a.dni === dni)
+        if (index === -1) {
+            return res.status(404).json({ mensaje: "Aprendiz no encontrado" })
+        }
+        listaAprendices.splice(index, 1)
+        sistemaArchivo.writeFile(rutaArchivoJson, JSON.stringify(listaAprendices, null, 2), (error) => {
+            if (error) {
+                return res.status(500).json({ Error: "No se pudo eliminar el aprendiz." })
+            }
+            res.json({ mensaje: "Aprendiz eliminado correctamente" })
+        })
+    })
+})
 
 // Modo de escucha del servidor
 app.listen(port, () => {
