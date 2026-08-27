@@ -8,9 +8,9 @@
     "avatar": "img/juan.jpg"
   },
   {
-    "dni": 3,
-    "nombre": "Jhony",
-    "apellido": "Perez",
+    "dni": 2,
+    "nombre": "Samuel",
+    "apellido": "Gutierrez",
     "edad": 25,
     "correo": "juan@example.com",
     "avatar": "img/juan.jpg"
@@ -24,154 +24,10 @@
     "avatar": "img/juan.jpg"
   },
   {
-    "dni": 6,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 7,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 8,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 9,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 10,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 11,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 12,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 13,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 14,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 15,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 16,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 17,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 18,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 19,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 21,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 22,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 23,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 24,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
-    "correo": "juan@example.com",
-    "avatar": "img/juan.jpg"
-  },
-  {
-    "dni": 25,
-    "nombre": "Jhony",
-    "apellido": "Perez",
-    "edad": 25,
+    "dni": 5,
+    "nombre": "Daniela",
+    "apellido": "Avendaño",
+    "edad": 20,
     "correo": "juan@example.com",
     "avatar": "img/juan.jpg"
   }
