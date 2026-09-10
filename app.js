@@ -1,9 +1,20 @@
 const express = require('express');
+const registroMiddleware = require('./middleware/registroMiddleware')
 const app = express();
 require('dotenv/config');
 const port = process.env.PORT || 3111;
 //body-parser
 app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
+app.use((req,res, next)=>{
+    const tiempoMilisegundos = Date.now()
+    console.log(`tiempo: ${tiempoMilisegundos}`)
+    next()
+})
+
+app.use(registroMiddleware)
+
 
 //libreria para leer archivo
 const sistemaArchivo = require('fs');
@@ -12,9 +23,14 @@ const ruta = require('path');
 const rutaArchivoJson = ruta.join(__dirname, 'lista_datos.json');
 //ruta raiz
 const { validateAprendizData} = require('./validaciones');
+const { networkInterfaces } = require('os');
+const autenticarToken = require('./middleware/autenticar')
+const jswtoken = require("jsonwebtoken")
+const manejadorErrores = require('./middleware/manejadorErrores');
 app.get('/', (req, res) => {
     res.send('API RESTFUL - CRUD Aprendices');
 });
+
 
 //endpoint para obtener todos los aprendices
 app.get('/api/aprendices', (req, res) => {
@@ -128,6 +144,39 @@ app.delete("/api/aprendices/:dni", (req, res) => {
     })
 })
 
+app.get("/rutaProtegida", autenticarToken, (req, res)=>{
+    res.json({mensaje: "Este es una ruta protegida"})
+})
+
+//endpoint inicio de sesion para generar token
+app.post("/login", (req, res)=>{
+    const {usuario, clave} = req.body
+    const usuariobd = {
+        "usuario":"yo",
+        "clave": "abc123"
+}
+//validar datos de usuario
+if (usuario !== usuariobd.usuario || clave !== usuariobd.clave ){
+    res.json({mensaje: "Usuario y/o clave incorrectos"})
+}
+//crear token
+const token = jswtoken.sign(
+    //pasamos datos del usuario
+    {user: usuario}, 
+    process.env.JWT_SECRET,
+    {expiresIn: "4h"}
+)
+res.json({token})
+})
+
+
+//endpoint error
+app.get("/error", (req, res, next)=>{
+    next(new Error("Error provocado"))
+})
+
+//manejador de errores
+app.use(manejadorErrores)
 // Modo de escucha del servidor
 app.listen(port, () => {
     console.log(`SERVER: http://localhost:${port}`)
