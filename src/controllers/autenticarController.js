@@ -4,7 +4,7 @@ const ingresar = require("../services/autenticarService")
 const iniciarSesion = async (req,res) =>{
     const {usuario, clave} = req.body
     const token = ingresar(usuario, clave)
-    res.json(token)
+    res.json({token: token})
 
     // try{
     // } catch (error){
