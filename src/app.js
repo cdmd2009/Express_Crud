@@ -22,7 +22,7 @@ const ruta = require('path');
 //generar una ruta para el archivo aprendices.json
 const rutaArchivoJson = ruta.join(__dirname, 'lista_datos.json');
 //ruta raiz
-const { validateAprendizData} = require('./validaciones');
+const { validateAprendizData} = require('./validaciones/validaciones');
 const { networkInterfaces } = require('os');
 const autenticarToken = require('./middleware/autenticar')
 const jswtoken = require("jsonwebtoken")
